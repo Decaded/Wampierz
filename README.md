@@ -3,7 +3,6 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)
 ![Node.js Version](https://img.shields.io/badge/Node.js-v14.0-green)
-![Dependencies](https://david-dm.org/Decaded/wampierz/status.svg)
 
 Wampierz is a Discord bot designed to fetch and display SteamID information for V Rising servers using the CeloAPI. This bot allows server administrators to set the update channel,
 update interval, and API URL via Discord commands.
