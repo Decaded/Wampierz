@@ -4,7 +4,7 @@
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)
 ![Node.js Version](https://img.shields.io/badge/Node.js-v14.0-green)
 
-Wampierz is a Discord bot designed to fetch and display SteamID information for V Rising servers using the CeloAPI. This bot allows server administrators to set the update channel,
+Wampierz is a Discord bot designed to fetch and display SteamID information for V Rising servers using the [CeloAPI](https://github.com/Celofyz/vrising-server-api). This bot allows server administrators to set the update channel,
 update interval, and API URL via Discord commands.
 
 ## Features
