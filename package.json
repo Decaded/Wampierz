@@ -1,0 +1,43 @@
+{
+  "name": "wampierz",
+  "version": "1.0.0",
+  "description": "A Discord bot to fetch and display SteamID information for V Rising servers using the CeloAPI.",
+  "main": "run.js",
+  "scripts": {
+    "start": "echo Starting... && node run.js",
+    "dev": "nodemon run.js",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "author": "Decaded",
+  "license": "ISC",
+  "dependencies": {
+    "@decaded/nyadb": "^2.0.0",
+    "axios": "^1.6.8",
+    "discord.js": "^14.15.2",
+    "dotenv": "^16.4.5",
+    "dotenv-safe": "^9.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.3.0",
+    "nodemon": "^2.0.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Decaded/wampierz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Decaded/wampierz/issues"
+  },
+  "homepage": "https://github.com/Decaded/wampierz#readme",
+  "keywords": [
+    "discord",
+    "bot",
+    "v-rising",
+    "server",
+    "steamid",
+    "api"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
