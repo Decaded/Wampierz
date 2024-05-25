@@ -1,27 +1,18 @@
 function hasDataChanged(currentData, newData) {
 	let updated = false;
 
-	if (currentData.steamId !== newData.steamId) {
-			currentData.steamId = newData.steamId;
-			updated = true;
-	}
+	// Check if each relevant field has changed
+	const fieldsToCheck = ['steamId', 'serverStatus', 'startTime', 'version', 'userCount'];
+	const updatedData = { ...currentData };
 
-	if (currentData.serverStatus !== newData.serverStatus) {
-			currentData.serverStatus = newData.serverStatus;
+	fieldsToCheck.forEach(field => {
+		if (currentData[field] !== newData[field]) {
 			updated = true;
-	}
+			updatedData[field] = newData[field];
+		}
+	});
 
-	if (currentData.startTime !== newData.startTime) {
-			currentData.startTime = newData.startTime;
-			updated = true;
-	}
-
-	if (currentData.version !== newData.version) {
-			currentData.version = newData.version;
-			updated = true;
-	}
-
-	return { updated, currentData };
+	return { updated, currentData: updatedData };
 }
 
 module.exports = hasDataChanged;
