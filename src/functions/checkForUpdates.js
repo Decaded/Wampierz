@@ -3,6 +3,7 @@ const setStatus = require('./setStatus');
 const hasDataChanged = require('./hasDataChanged');
 const createStatusEmbed = require('./createStatusEmbed');
 const updateStatusMessage = require('./updateStatusMessage');
+const convertStartTime = require('./convertStartTime');
 
 async function checkForUpdates(client) {
 	try {
@@ -38,13 +39,18 @@ async function checkForUpdates(client) {
 		if (updated) {
 			client.db.set('steamId', updatedData);
 
+			const readableStartTime = convertStartTime(serverData.startTime);
+
 			const embed = await createStatusEmbed(
 				'Server Status',
 				' ',
 				[
 					{ name: 'Status', value: serverData.serverStatus, inline: true },
 					{ name: 'Steam ID', value: serverData.steamId, inline: true },
-					{ name: 'Start Time', value: serverData.startTime, inline: false },
+					{ name: '\u200B', value: '\u200B', inline: false },
+					{ name: 'Start Time', value: readableStartTime, inline: true },
+					{ name: 'Users Online', value: serverData.userCount, inline: true },
+					{ name: '\u200B', value: '\u200B', inline: false },
 					{ name: 'Server Version', value: serverData.version, inline: false },
 				],
 				serverData.serverStatus === 'ONLINE' ? 0x00ff00 : 0xff0000,
