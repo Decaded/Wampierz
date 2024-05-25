@@ -19,7 +19,8 @@ update interval, and API URL via Discord commands.
 - `/setchannel`: Set the update channel for server notifications.
 - `/setinterval`: Set the update interval in seconds (minimum 10 seconds).
 - `/setapiurl`: Set the API URL for fetching server data.
-- `/restart`: Restart the bot (requires appropriate permissions).
+- `/setrole`: Set role that will have permission to use this commands.
+- `/restart`: Restart the bot.
 
 ## Prerequisites
 
