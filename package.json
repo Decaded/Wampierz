@@ -9,7 +9,7 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "author": "Decaded",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@decaded/nyadb": "^2.0.0",
     "axios": "^1.6.8",
